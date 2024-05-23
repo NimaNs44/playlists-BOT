@@ -1,16 +1,9 @@
-import os
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 
-# دریافت توکن و آیدی کانال از متغیرهای محیطی
-TOKEN = os.getenv('TOKEN')
-CHANNEL_ID = os.getenv('CHANNEL_ID')
-
-# بررسی و چاپ توکن و آی‌دی کانال برای اطمینان
-if not TOKEN:
-    raise ValueError("No TOKEN provided")
-if not CHANNEL_ID:
-    raise ValueError("No CHANNEL_ID provided")
+# توکن و آیدی کانال مستقیم در کد
+TOKEN = '6547251456:AAE0E6w7vqYWxqgqHG3V83RFloV1dKXg3pE'
+CHANNEL_ID = '1348763701'
 
 async def start(update: Update, context: CallbackContext) -> None:
     await update.message.reply_text('سلام! من یک بات هستم که به هر پستی کپشن اضافه می‌کنم و آن را به کانال ارسال می‌کنم.')
