@@ -17,7 +17,7 @@ async def start(update: Update, context: CallbackContext) -> None:
 
 async def handle_message(update: Update, context: CallbackContext) -> None:
     message = update.message
-    new_caption = '@NimaPlaylists'
+    new_caption = 'NimaPlaylists (http://t.me/Nimaplaylists)'
 
     if message.photo:
         photo = message.photo[-1].file_id
